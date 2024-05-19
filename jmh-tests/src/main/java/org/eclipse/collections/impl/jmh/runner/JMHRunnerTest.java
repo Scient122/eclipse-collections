@@ -11,6 +11,7 @@
 package org.eclipse.collections.impl.jmh.runner;
 
 import org.junit.Test;
+import org.openjdk.jmh.results.format.ResultFormatType;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
@@ -35,11 +36,13 @@ public class JMHRunnerTest
         Options opts = new OptionsBuilder()
                 .include(include)
                 .verbosity(mode)
-                .forks(1)
-                .warmupTime(TimeValue.seconds(2))
-                .warmupIterations(5)
-                .measurementTime(TimeValue.seconds(2))
-                .measurementIterations(5)
+                .forks(10)
+                .warmupTime(TimeValue.seconds(0))
+                .warmupIterations(0)
+                .measurementTime(TimeValue.milliseconds(100))
+                .measurementIterations(3000)
+                .resultFormat(ResultFormatType.JSON)
+                .result("results.json")
                 .build();
         try
         {
