@@ -42,13 +42,13 @@
             <artifactId>eclipse-collections</artifactId>
             <version>${project.version}</version>
         </dependency>
-<!--
+
         <dependency>
             <groupId>org.eclipse.collections</groupId>
             <artifactId>eclipse-collections-forkjoin</artifactId>
             <version>${project.version}</version>
         </dependency>
-        -->
+
 
         <dependency>
             <groupId>org.eclipse.collections</groupId>
