@@ -112,6 +112,10 @@
         <module>unit-tests-java8</module>
         <module>test-coverage</module>
         <module>p2-repository</module>
+        <module>jmh-tests</module>
+        <module>jmh-scala-tests</module>
+        <module>acceptance-tests</module>
+        <module>scala-unit-tests</module>
     </modules>
 
     <properties>
