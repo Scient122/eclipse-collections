@@ -40,7 +40,7 @@ public class IntIntMapTest
     @Param({"1", "10", "100", "10000", "30000", "100000"})
     public int mapSizeDividedBy64;
 
-    @Param({"true", "false"})
+    @Param({"true"/*, "false"*/})
     public boolean fullyRandom;
 
     private MutableIntIntMap intIntMap;

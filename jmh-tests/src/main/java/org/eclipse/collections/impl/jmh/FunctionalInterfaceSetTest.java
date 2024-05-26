@@ -60,7 +60,7 @@ public class FunctionalInterfaceSetTest
     private static final int SIZE = 1_000_000;
     private static final int BATCH_SIZE = 10_000;
 
-    @Param({"0", "1", "2", "3"})
+    @Param({"0"/*, "1", "2", "3"*/})
     public int megamorphicWarmupLevel;
 
     private final List<Integer> integersJDK = new ArrayList<>(Interval.oneTo(SIZE));

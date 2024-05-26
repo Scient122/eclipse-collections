@@ -52,7 +52,7 @@ public class IntIntMapSmallStressTest
     private static final int KEY_COUNT = 500;
     private static final int MAP_SIZE = 1_000;
 
-    @Param({"true", "false"})
+    @Param({"true"/*, "false"*/})
     public boolean fullyRandom;
     private IntIntMap intIntKoloboke;
     private MutableIntIntMap intIntEc;
