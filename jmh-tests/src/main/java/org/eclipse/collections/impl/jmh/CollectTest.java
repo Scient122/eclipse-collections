@@ -111,7 +111,7 @@ public class CollectTest
         CollectScalaTest.parallel_lazy_scala();
     }*/
 
-    @Benchmark
+    @Benchmark //f
     public void serial_eager_ec()
     {
         MutableList<String> strings = this.integersEC.collect(Object::toString);
