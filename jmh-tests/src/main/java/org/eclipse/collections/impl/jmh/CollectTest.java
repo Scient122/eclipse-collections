@@ -79,19 +79,19 @@ public class CollectTest
         Verify.assertSize(SIZE, strings);
     }
 
-    @Benchmark
+    /*@Benchmark
     public void parallel_lazy_jdk()
     {
         List<String> strings = this.integersJDK.parallelStream().map(Object::toString).collect(Collectors.toList());
         Verify.assertSize(SIZE, strings);
-    }
+    }*/
 
-    @Benchmark
+   /* @Benchmark
     public void parallel_lazy_streams_ec()
     {
         List<String> strings = this.integersEC.parallelStream().map(Object::toString).collect(Collectors.toList());
         Verify.assertSize(SIZE, strings);
-    }
+    }*/
 
     @Benchmark
     public void serial_eager_scala()
@@ -105,11 +105,11 @@ public class CollectTest
         CollectScalaTest.serial_lazy_scala();
     }
 
-    @Benchmark
+   /* @Benchmark
     public void parallel_lazy_scala()
     {
         CollectScalaTest.parallel_lazy_scala();
-    }
+    }*/
 
     @Benchmark
     public void serial_eager_ec()
@@ -118,14 +118,14 @@ public class CollectTest
         Verify.assertSize(SIZE, strings);
     }
 
-    @Benchmark
+    /*@Benchmark
     public void parallel_eager_ec()
     {
         Collection<String> strings = ParallelIterate.collect(this.integersEC, Object::toString);
         Verify.assertSize(SIZE, strings);
-    }
+    }*/
 
-    @Benchmark
+   /* @Benchmark
     public void parallel_eager_fixed_pool_ec()
     {
         Collection<String> strings = ParallelIterate.collect(
@@ -136,7 +136,7 @@ public class CollectTest
                 this.executorService,
                 false);
         Verify.assertSize(SIZE, strings);
-    }
+    }*/
 
     @Benchmark
     public void serial_lazy_ec()
@@ -145,10 +145,10 @@ public class CollectTest
         Verify.assertSize(SIZE, strings);
     }
 
-    @Benchmark
+    /*@Benchmark
     public void parallel_lazy_ec()
     {
         MutableList<String> strings = this.integersEC.asParallel(this.executorService, BATCH_SIZE).collect(Object::toString).toList();
         Verify.assertSize(SIZE, strings);
-    }
+    }*/
 }
